@@ -39,7 +39,7 @@ export default class TodoService {
 	addTodo(todo) {
 		todoApi.post('', todo)
 			.then(res => {
-				// WHAT DO YOU DO AFTER CREATING A NEW TODO?
+				// WHAT DO YOU DO AFTER CREATING A NEW TO-DO?
 			})
 			.catch(err => _setState('error', err.response.data))
 	}
