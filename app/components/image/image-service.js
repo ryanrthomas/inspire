@@ -14,7 +14,7 @@ let _subscribers = {
 	image: []
 }
 
-function setState(prop, data) {
+function _setState(prop, data) {
 	_state[prop] = data
 	_subscribers[prop].forEach(fn => fn())
 }

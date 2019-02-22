@@ -6,7 +6,7 @@ export default class Image {
 
     getTemplate() {
         return `
-        
+        <img src=${this.url}>
         `
     }
 }
