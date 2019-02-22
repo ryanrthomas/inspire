@@ -4,7 +4,7 @@ const _is = new ImageService()
 
 function drawImage() {
     console.log("THE IMAGE DISPLAYS:", _is.Image)
-    document.querySelector('#bg-image').innerHTML = _is.Image.getTemplate()
+    document.querySelector('body').style.backgroundImage = `url(${_is.Image.url})`
 
 }
 
