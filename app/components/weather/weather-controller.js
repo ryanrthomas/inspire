@@ -10,8 +10,8 @@ function drawWeather() {
 export default class WeatherController {
 
 	constructor() {
-		_ws.addSubscriber('weather', drawWeather)
-		_ws.getWeather()
+		_ws.addSubscriber('weather', drawWeather);
+		_ws.getWeather();
 	}
 
 }
