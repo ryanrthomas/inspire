@@ -1,16 +1,17 @@
 import WeatherService from "./weather-service.js";
 
-var _weatherService = new WeatherService()
+var _ws = new WeatherService()
 
 function drawWeather() {
-	console.log("THE WEATHER MAN SAYS:", _weatherService.Weather)
+	console.log("THE WEATHER MAN SAYS:", _ws.Weather)
+	document.querySelector('#weather').innerHTML = _ws.Weather.getTemplate()
 }
 
 export default class WeatherController {
 
 	constructor() {
-		_weatherService.addSubscriber('weather', drawWeather)
-		_weatherService.getWeather()
+		_ws.addSubscriber('weather', drawWeather)
+		_ws.getWeather()
 	}
 
 }
