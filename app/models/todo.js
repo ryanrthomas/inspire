@@ -3,9 +3,7 @@ export default class Todo {
         this.description = data.description
         this._id = data._id;
     }
-
 }
-
     
 // getTemplate() {
 //     return `

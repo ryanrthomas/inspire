@@ -7,7 +7,7 @@ function _drawTodos() {
 	let template = ''
 	_tds.Todos.forEach(t => {
 		template += `
-		<li>${t.description} <i class="fas fa-check-square"></i> <i onclick="app.controllers.todoController.removeTodo('${t._id}')" class="fas fa-trash-alt"></i></li>
+		<li>${t.description} <i onclick="app.controllers.todoController.completeTodo('${t._id}')"class="fas fa-check-square"></i> <i onclick="app.controllers.todoController.removeTodo('${t._id}')" class="fas fa-trash-alt"></i></li>
 		
 		`
 	})
@@ -43,14 +43,9 @@ export default class TodoController {
 		_tds.getTodos(todoId)
 	}
 
-	// Get all to-dos by user
-	toggleTodoStatus(todoId) {
-		_tds.toggleTodoStatus(todoId)
-	}
-
 	// Edit To-do at Id
-	toggleTodoStatus(todoId) {
-		_tds.toggleTodoStatus(todoId)
+	completeTodo(todoId) {
+		_tds.completeTodo(todoId)
 	}
 
 	// Delete To-do by Id

@@ -52,16 +52,12 @@ export default class TodoService {
 			})
 	}
 
-	// Put request method
-	toggleTodoStatus(todoId) {
-		let todo = _state.todos.find(todo => todo._id == todoId)
-		let myTodo = _state.todos.find(t => t.name == todo.name)
-
-		todoApi.put(todoId, todo)
+	// Edit data!
+	completeTodo(newTodo) {
+		todoApi.put(newTodo.todoId, newTodo)
 			.then(res => {
-				this.getTodos();
+				this.getTodos()
 			})
-			.catch(err => _setState('error', err.response.data))
 	}
 
 	// Delete data!
