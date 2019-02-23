@@ -3,11 +3,13 @@ export default class Todo {
         this.description = data.description
         this._id = data._id;
     }
-    
-    getTemplate() {
-        return `
-        <h1>Add new to-do</h1>
-        <h1>${this.description}</h1>
-        `
-    }
+
 }
+
+    
+// getTemplate() {
+//     return `
+//     <h1>Add new to-do</h1>
+//     <h1>${this.description}</h1>
+//     `
+// }
