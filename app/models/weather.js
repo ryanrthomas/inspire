@@ -7,7 +7,8 @@ export default class Weather {
   
   getTemplate() { // Temperature has already been converted from Kelvin to Fahrenheit/Celsius.
     return `
-      <h1>The weather is ${Math.round((this.kelvin - 273.15)*9/5+32).toFixed()}°F/${Math.round(this.kelvin - 273.15)}°C right now in ${this.city}.</h1>
+      <h4>${Math.round((this.kelvin - 273.15)*9/5+32).toFixed()}°F/${Math.round(this.kelvin - 273.15)}°C</h4>
+      <h5>${this.city}</h5>
     `
   }
 }

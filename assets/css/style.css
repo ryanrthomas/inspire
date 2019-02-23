@@ -3,9 +3,15 @@ body {
   text-shadow: 0 0 5px black;
   font-family: Arial, Helvetica, sans-serif;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #todo-error{
   color: red;
   font-size: 2em;
+}
+
+#greeting {
+  height: 280px;
 }

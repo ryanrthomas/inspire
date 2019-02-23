@@ -5,25 +5,48 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<title>Inspire</title>
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image">
-	<h1>Greetings!</h1>
-	<div id="weather">
-		<!-- Your Weather Template -->
-	</div>
+<body id="bg-image" class="container-fluid">
 
-	<div id="quote">
-		<!-- The Quote -->
+	<div class="row">
+		<div class="col-6">
+			<div>
+				<!-- A To-do List -->
+				<h3>To-Dos:</h3>
+				<div id="todo-error"></div>
+				<form onsubmit=""></form>
+				<div id="todos"></div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div id="weather" class="text-right">
+				<!-- Your Weather Template -->
+			</div>
+		</div>
 	</div>
-
-	<div>
-		<!-- A To-do List -->
-		<div id="todo-error"></div>
-		<form onsubmit=""></form>
-		<div id="todos"></div>
+	<div class="row">
+		<div class="col-12">
+			<div id="greeting" class="text-center">
+				<h1>Greetings!</h1>
+			</div>		
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-6">
+			<div id="quote">
+				<!-- The Quote -->
+			</div>
+		</div>
+		<div class="col-6">
+			<div id="img-desc" class="text-right">
+				<!-- Image Description -->
+			</div>
+		</div> .
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
