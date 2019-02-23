@@ -7,7 +7,8 @@ function _drawTodos() {
 	let template = ''
 	_tds.Todos.forEach(t => {
 		template += `
-		<h1 onclick="app.controllers.todo-controller.getTodos('${t.description}')">${t.description}</h1>
+		<li>${t.description} <i class="fas fa-check-square"></i> <i onclick="app.controllers.todoController.removeTodo('${t._id}')" class="fas fa-trash-alt"></i></li>
+		
 		`
 	})
 	document.querySelector('#todos').innerHTML = template;
@@ -33,6 +34,8 @@ export default class TodoController {
 			description: form.description.value
 		}
 		_tds.addTodo(todo)
+		// Clears the form
+		form.reset();
 	}
 
 	// Get one to-do

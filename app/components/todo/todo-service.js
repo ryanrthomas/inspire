@@ -35,7 +35,7 @@ export default class TodoService {
 
 	// Get data!
 	getTodos() {
-		console.log("Getting the Todo List")
+		console.log("Getting the To-do List")
 		todoApi.get()
 			.then(res => {
 				let data = res.data.data.map(t => new Todo(t))
@@ -45,11 +45,11 @@ export default class TodoService {
 
 	// Post data!
 	addTodo(todo) {
-		todoApi.post('', todo)
+		let newTodo = new Todo(todo)
+		todoApi.post('', newTodo)
 			.then(res => {
-				this.getTodos
+				this.getTodos()
 			})
-			.catch(err => _setState('error', err.response.data))
 	}
 
 	// Put request method
@@ -66,7 +66,7 @@ export default class TodoService {
 
 	// Delete data!
 	removeTodo(todoId) {
-		todoApi.delete(todoApi)
+		todoApi.delete(todoId)
 			.then(res => {
 				console.log(res.data)
 				this.getTodos();
