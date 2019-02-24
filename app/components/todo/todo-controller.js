@@ -7,11 +7,11 @@ function _drawTodos() {
 	let template = ''
 	_tds.Todos.forEach(t => {
 		template += `
-		<li>${t.description} <i onclick="app.controllers.todoController.completeTodo('${t._id}')"class="fas fa-check-square"></i> <i onclick="app.controllers.todoController.removeTodo('${t._id}')" class="fas fa-trash-alt"></i></li>
-		
+		<li>${t.description} <i onclick="app.controllers.todoController.completeTodo('${t._id}')" class="fas fa-check-square"></i> <i onclick="app.controllers.todoController.removeTodo('${t._id}')" class="fas fa-trash-alt"></i></li>
 		`
 	})
 	document.querySelector('#todos').innerHTML = template;
+	console.log(`There are ${template.length} to-dos.`)
 }
 
 function _drawError() {
@@ -54,9 +54,6 @@ export default class TodoController {
 	}
 
 }
-
-
-
 
 {
     description: ""

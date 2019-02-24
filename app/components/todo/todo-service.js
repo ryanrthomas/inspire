@@ -10,6 +10,7 @@ let _state = {
 	todos: [],
 	error: {},
 }
+
 let _subscribers = {
 	todos: [],
 	error: []
@@ -53,10 +54,14 @@ export default class TodoService {
 	}
 
 	// Edit data!
-	completeTodo(newTodo) {
-		todoApi.put(newTodo.todoId, newTodo)
+	completeTodo(todoId) {
+		todoApi.put(newData.todoId, newData)
 			.then(res => {
-				this.getTodos()
+				console.log(res.data)
+				this.getTodos();
+			})
+			.catch(err => {
+				console.error(err)
 			})
 	}
 

@@ -21,7 +21,7 @@
 				<h3>To-Dos:</h3>
 				<div id="todo-error"></div>
 				<form onsubmit="app.controllers.todoController.addTodo(event)">
-					<input type="text" name="description" placeholder="Write here..." required>
+					<input type="text" name="description" placeholder="Add new to-do..." required>
 					<button type="submit">Post</button>
 				</form>
 				<ul id="todos"></ul>
@@ -41,16 +41,11 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-6">
-			<div id="quote">
+		<div class="col-12">
+			<div id="quote" class="text-center">
 				<!-- The Quote -->
 			</div>
 		</div>
-		<div class="col-6">
-			<div id="img-desc" class="text-right">
-				<!-- Image Description -->
-			</div>
-		</div> .
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
