@@ -4,14 +4,15 @@ const _tds = new TodoService()
 
 function _drawTodos() {
 	console.log("LISTING ALL TO-DOS.")
+		document.querySelector('#todo-count').innerHTML = `You have ${_tds.Todos.length} tasks.`;
 	let template = ''
 	_tds.Todos.forEach(t => {
 		template += `
-		<input type="checkbox"> ${t.description} <i onclick="app.controllers.todoController.removeTodo('${t._id}')" class="fas fa-trash-alt"></i>
+		<input type="checkbox"> ${t.description} <i onclick="app.controllers.todoController.removeTodo('${t._id}')" class="fas fa-trash-alt"></i><br>
 		`
 	})
 	document.querySelector('#todos').innerHTML = template;
-	console.log(`There are ${template.length} to-dos.`)
+	console.log(`There are ${_tds.Todos.length} to-dos.`)
 }
 
 function _drawError() {

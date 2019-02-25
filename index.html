@@ -19,7 +19,9 @@
 		<div class="col-6">
 			<div>
 				<!-- A To-do List -->
-				<h3>To-Dos:</h3>
+				<h3 id="todo-count">
+					<!-- List number of to-dos -->
+				</h3>
 				<div id="todo-error"></div>
 				<form onsubmit="app.controllers.todoController.addTodo(event)">
 					<input type="text" name="description" placeholder="Add new to-do..." required>
