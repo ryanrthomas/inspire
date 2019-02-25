@@ -7,7 +7,7 @@ function _drawTodos() {
 	let template = ''
 	_tds.Todos.forEach(t => {
 		template += `
-		<li>${t.description} <i onclick="app.controllers.todoController.completeTodo('${t._id}')" class="fas fa-check-square"></i> <i onclick="app.controllers.todoController.removeTodo('${t._id}')" class="fas fa-trash-alt"></i></li>
+		<input type="checkbox"> ${t.description} <i onclick="app.controllers.todoController.removeTodo('${t._id}')" class="fas fa-trash-alt"></i>
 		`
 	})
 	document.querySelector('#todos').innerHTML = template;
