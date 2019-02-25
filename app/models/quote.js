@@ -6,9 +6,12 @@ export default class Quote {
     }
 
     getTemplate() {
+    
+    let date = new Date();
+    
         return `
         <h5>"${this.quote}"</h5>
-        <p>- ${this.author}</p>
+        <p>- ${this.author}</p>        
         `
     }
 }
