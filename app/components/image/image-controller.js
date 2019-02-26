@@ -26,7 +26,7 @@ function drawImage() {
     if (minutes < 10) { minutes = "0" + minutes; }
 
     // 12-hour time
-    if (hours >= 1 && hours < 13) {
+    if (hours >= 1 && hours < 12) {
         minutes = minutes + " AM"
     } else {
         hours -= 12;
