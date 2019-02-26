@@ -10,6 +10,8 @@ function drawImage() {
     // Display background image
     document.querySelector('body').style.backgroundImage = `url(${_is.Image.url})`
     var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
 
     // Change greeting based on time of day
     if (hours >= 4 && hours < 12) {
@@ -19,9 +21,20 @@ function drawImage() {
     } else {
         document.querySelector('#greeting').innerHTML = `<h1>Good evening, Ryan!</h1>`
     }
- 
+
+    // Zeroes in front of minutes/hours
+    if (minutes < 10) { minutes = "0" + minutes; }
+
+    // 12-hour time
+    if (hours >= 1 && hours < 13) {
+        minutes = minutes + " AM"
+    } else {
+        hours -= 12;
+        minutes = minutes + " PM" 
+    }
+
     //
-    document.querySelector('#time').innerHTML = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+    document.querySelector('#time').innerHTML = `${hours}:${minutes}`
     document.querySelector('#date').innerHTML = `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
 }
 
