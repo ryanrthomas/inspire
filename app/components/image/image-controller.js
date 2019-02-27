@@ -27,12 +27,10 @@ function drawImage() {
     if (seconds < 10) { seconds = "0" + seconds; }
 
     // 12-hour time
-    if (hours >= 1 && hours < 12) {
-        seconds = seconds + " AM"
-    } else {
-        hours -= 12;
-        seconds = seconds + " PM"
-    }
+    if (hours < 12) { seconds = seconds + " AM" }
+    else { seconds = seconds + " PM" }
+    if (hours == 0) { hours += 12; }
+    if (hours > 12) { hours -= 12; }
 
     //
     document.querySelector('#time').innerHTML = `${hours}:${minutes}:${seconds}`
