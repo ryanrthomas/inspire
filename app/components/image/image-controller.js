@@ -34,7 +34,7 @@ function drawImage() {
 
     //
     document.querySelector('#time').innerHTML = `${hours}:${minutes}:${seconds}`
-    document.querySelector('#date').innerHTML = `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
+    document.querySelector('#date').innerHTML = `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}<hr>`
     var t = setTimeout(drawImage, 500)
 }
 
