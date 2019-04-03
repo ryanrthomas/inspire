@@ -14,3 +14,7 @@ body {
 #time {
   font-size: 132px;
 }
+hr {
+  background-color: white;
+  width: 75%;
+}
