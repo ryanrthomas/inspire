@@ -14,7 +14,12 @@ body {
 #time {
   font-size: 132px;
 }
+
 hr {
   background-color: white;
   width: 50%;
+}
+
+#todos {
+  margin-top: 10px;
 }
